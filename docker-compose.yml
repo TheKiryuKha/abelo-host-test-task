@@ -17,6 +17,10 @@ services:
             - MYSQL_DATABASE=${MYSQL_DATABASE}
             - MYSQL_USER=${MYSQL_USER}
             - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        depends_on:
+            database:
+                condition: service_healthy
+                
     database:
         image: mysql
         environment:
@@ -28,7 +32,12 @@ services:
             - database_data:/var/lib/mysql
         ports:
             - "3306:3306"
-
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+            interval: 5s
+            timeout: 5s
+            retries: 10
+            start_period: 10s
 
 volumes:
     database_data:
