@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Domain;
 
-final readonly class Image
+final class Image
 {
     private ?int $id = null;
 

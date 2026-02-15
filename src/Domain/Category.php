@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Domain;
 
-final readonly class Category
+final class Category
 {
     private ?int $id = null;
 
