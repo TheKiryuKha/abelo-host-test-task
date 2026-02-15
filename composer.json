@@ -13,8 +13,12 @@
             "Tests\\": "tests/"
         }
     },
+    "require": {
+        "php": ">=8.4"
+    },
     "require-dev": {
-        "pestphp/pest": "^4.3"
+        "pestphp/pest": "^4.3",
+        "rector/rector": "^2.3"
     },
     "config": {
         "allow-plugins": {

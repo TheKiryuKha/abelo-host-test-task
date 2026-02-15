@@ -15,7 +15,7 @@ final readonly class Category
         $this->id = $id;
     }
 
-    public function getId(int $id): ?int
+    public function getId(): ?int
     {
         return $this->id;
     }
