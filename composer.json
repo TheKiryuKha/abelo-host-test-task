@@ -26,5 +26,24 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "scripts": {
+        "lint": "php-cs-fixer fix",
+        "refactor": "rector",
+        "fix": [
+            "@refactor",
+            "@lint"
+        ],
+        "test:lint": [
+            "php-cs-fixer fix --dry-run",
+            "rector --dry-run"
+        ],
+        "test:types": "phpstan analyse",
+        "test:unit": "pest --parallel",
+        "test": [
+            "@test:lint",
+            "@test:unit",
+            "@test:types"
+        ]
     }
 }

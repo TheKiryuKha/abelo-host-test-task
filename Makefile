@@ -35,6 +35,12 @@ console: ## Login in console.
 install: ## Install dependencies without running the whole application.
 	${DC_RUN} composer install
 
+fix: ## Runs linters
+	${DC_RUN} composer fix
+
+test: ## Runs all tests
+	${DC_RUN} composer test
+
 success-message:
 	@echo "You can now access the application at http://localhost:8337"
 	@echo "Good luck! 🚀"
