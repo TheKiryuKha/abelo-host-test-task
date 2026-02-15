@@ -41,6 +41,9 @@ fix: ## Runs linters
 test: ## Runs all tests
 	${DC_RUN} composer test
 
+migrate: ## Runs all migrations
+	${DC_RUN} /bin/bash -c "cd database && ./../vendor/bin/phinx migrate"
+
 success-message:
 	@echo "You can now access the application at http://localhost:8337"
 	@echo "Good luck! 🚀"

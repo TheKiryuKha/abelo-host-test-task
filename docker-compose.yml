@@ -11,6 +11,12 @@ services:
             - .:/app:rw
         environment:
             - APP_ENV=dev
+            - ENVIRONMENT=${ENVIRONMENT}
+            - DB_HOST=database
+            - DB_PORT=3306
+            - MYSQL_DATABASE=${MYSQL_DATABASE}
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     database:
         image: mysql
         environment:
@@ -19,7 +25,10 @@ services:
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_USER: ${MYSQL_USER}
         volumes:
-            - database_data:/var/mysql/data:rw
+            - database_data:/var/lib/mysql
+        ports:
+            - "3306:3306"
+
 
 volumes:
     database_data:
