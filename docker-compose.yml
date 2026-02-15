@@ -11,3 +11,15 @@ services:
             - .:/app:rw
         environment:
             - APP_ENV=dev
+    database:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_USER: ${MYSQL_USER}
+        volumes:
+            - database_data:/var/mysql/data:rw
+
+volumes:
+    database_data:
