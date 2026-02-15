@@ -7,7 +7,9 @@ namespace App\Domain;
 final readonly class Category
 {
     private ?int $id = null;
+
     private ?string $name = null;
+
     private ?string $description = null;
 
     public function setId(int $id): void

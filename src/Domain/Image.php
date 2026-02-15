@@ -7,6 +7,7 @@ namespace App\Domain;
 final readonly class Image
 {
     private ?int $id = null;
+
     private ?string $path = null;
 
     public function getId(): ?int

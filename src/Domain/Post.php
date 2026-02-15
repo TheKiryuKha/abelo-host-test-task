@@ -4,19 +4,21 @@ declare(strict_types=1);
 
 namespace App\Domain;
 
-use App\Domain\Image;
-use App\Domain\Category;
-
 final readonly class Post
 {
     private ?int $id = null;
+
     private ?string $title = null;
+
     private ?string $description = null;
+
     private ?string $text = null;
+
     private int $views = 0;
+
     private ?Image $image = null;
 
-    /** @var Category[] $categories */
+    /** @var Category[] */
     private array $categories = [];
 
     public function getId(): ?int
@@ -66,7 +68,7 @@ final readonly class Post
 
     public function view(): void
     {
-        $this->views++;
+        ++$this->views;
     }
 
     public function getImage(): ?Image
