@@ -10,7 +10,7 @@ PHONY: help
 help: ## This help.
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-init: down build install up migrate success-message console ## Initialize environment
+init: down build install up migrate seed success-message console ## Initialize environment
 
 build: ## Build services.
 	${DC} build $(c)
@@ -43,6 +43,9 @@ test: ## Runs all tests
 
 migrate: ## Runs all migrations
 	${DC_RUN} /bin/bash -c "cd database && ./../vendor/bin/phinx migrate"
+
+seed: ## Runs all seeders
+	${DC_RUN} /bin/bash -c "cd database && ./../vendor/bin/phinx seed:run"
 
 success-message:
 	@echo "You can now access the application at http://localhost:8337"
