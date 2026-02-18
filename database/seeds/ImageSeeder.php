@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Phinx\Seed\AbstractSeed;
 
-class ImageSeeder extends AbstractSeed
+final class ImageSeeder extends AbstractSeed
 {
     /**
      * Run Method.
@@ -18,13 +18,13 @@ class ImageSeeder extends AbstractSeed
     {
         $data = [
             [
-                'path' => '/storage/images/image1.jpeg'
+                'path' => '/storage/images/image1.jpeg',
             ],
             [
-                'path' => '/storage/images/image2.jpeg'
+                'path' => '/storage/images/image2.jpeg',
             ],
             [
-                'path' => '/storage/images/image3.jpeg'
+                'path' => '/storage/images/image3.jpeg',
             ],
         ];
 

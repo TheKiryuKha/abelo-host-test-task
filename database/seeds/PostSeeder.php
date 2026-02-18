@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Phinx\Seed\AbstractSeed;
 
-class PostSeeder extends AbstractSeed
+final class PostSeeder extends AbstractSeed
 {
     /**
      * Run Method.
@@ -21,19 +21,19 @@ class PostSeeder extends AbstractSeed
                 'title' => 'Lorem1',
                 'description' => 'Lorem Ipsum1',
                 'text' => 'Lorem Ipsum Dolorem bla bla bla 1',
-                'image_id' => 1
+                'image_id' => 1,
             ],
             [
                 'title' => 'Lorem2',
                 'description' => 'Lorem Ipsum2',
                 'text' => 'Lorem Ipsum Dolorem bla bla bla 2',
-                'image_id' => 2
+                'image_id' => 2,
             ],
             [
                 'title' => 'Lorem3',
                 'description' => 'Lorem Ipsum3',
                 'text' => 'Lorem Ipsum Dolorem bla bla bla 3',
-                'image_id' => 3
+                'image_id' => 3,
             ],
         ];
 
@@ -44,31 +44,31 @@ class PostSeeder extends AbstractSeed
         $data = [
             [
                 'post_id' => 1,
-                'category_id' => 1
+                'category_id' => 1,
             ],
             [
                 'post_id' => 1,
-                'category_id' => 2
+                'category_id' => 2,
             ],
             [
                 'post_id' => 1,
-                'category_id' => 3
+                'category_id' => 3,
             ],
             [
                 'post_id' => 1,
-                'category_id' => 4
+                'category_id' => 4,
             ],
             [
                 'post_id' => 2,
-                'category_id' => 2
+                'category_id' => 2,
             ],
             [
                 'post_id' => 3,
-                'category_id' => 1
+                'category_id' => 1,
             ],
             [
                 'post_id' => 3,
-                'category_id' => 4
+                'category_id' => 4,
             ],
         ];
 

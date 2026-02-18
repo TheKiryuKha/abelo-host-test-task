@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Phinx\Seed\AbstractSeed;
 
-class CategorySeeder extends AbstractSeed
+final class CategorySeeder extends AbstractSeed
 {
     /**
      * Run Method.
@@ -19,27 +19,27 @@ class CategorySeeder extends AbstractSeed
         $data = [
             [
                 'name' => 'Lorem1',
-                'description' => 'Lorem Ipsum1'
+                'description' => 'Lorem Ipsum1',
             ],
             [
                 'name' => 'Lorem2',
-                'description' => 'Lorem Ipsum2'
+                'description' => 'Lorem Ipsum2',
             ],
             [
                 'name' => 'Lorem2',
-                'description' => 'Lorem Ipsum2'
+                'description' => 'Lorem Ipsum2',
             ],
             [
                 'name' => 'Lorem3',
-                'description' => 'Lorem Ipsum3'
+                'description' => 'Lorem Ipsum3',
             ],
             [
                 'name' => 'Lorem4',
-                'description' => 'Lorem Ipsum4'
+                'description' => 'Lorem Ipsum4',
             ],
             [
                 'name' => 'Lorem5',
-                'description' => 'Lorem Ipsum5'
+                'description' => 'Lorem Ipsum5',
             ],
         ];
 
